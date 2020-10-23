@@ -1,0 +1,14 @@
+create table USER(
+username varchar(100) NOT NULL PRIMARY KEY, 
+password varchar(100) NOT NULL
+);
+
+CREATE TABLE ADDRESSES(
+username varchar(100) NOT NULL,
+street varchar(100) NOT NULL,
+state varchar(100) NOT NULL,
+pincode int NOT NULL,
+country varchar(100) NOT NULL,
+phone_no int NOT NULL, 
+FOREIGN KEY (username) REFERENCES user(username)
+);
